@@ -18,8 +18,8 @@ const ColorSelector = ({ fontColor, backgroundColor, handleFontChange, handleBac
 ColorSelector.propTypes = {
   handleFontChange: PropTypes.func.isRequired, 
   handleBackgroundChange: PropTypes.func.isRequired, 
-  fontColor: PropTypes.string.isRequired, 
-  backgroundColor: PropTypes.func.isRequired
+  fontColor: PropTypes.string, 
+  backgroundColor: PropTypes.string
 };
 
 export default ColorSelector;
