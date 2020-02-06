@@ -17,7 +17,7 @@ const NameTag = () => {
   return (
     <>
       <h1>NameTag App</h1>
-      <ColorSelector /> 
+      <ColorSelector value={color} /> 
       <TextSelector />
 
     </>
