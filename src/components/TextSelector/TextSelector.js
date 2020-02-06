@@ -5,7 +5,10 @@ import PropTypes from 'prop-types';
 const TextSelector = ({ text, handleTextChange }) => {
 
   return (
-    <input type="text" value={text} onChange={({ target }) => handleTextChange(target.value)} />
+    <>
+      <h3>enter your name</h3>
+      <input type="text" value={text} onChange={({ target }) => handleTextChange(target.value)} />
+    </>
   );
 }; 
 

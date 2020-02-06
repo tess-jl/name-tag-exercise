@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const Shape = ({ fontColor, backgroundColor, text }) => (
-  <div style={{ width: '100px', height:'100px', backgroundColor: decodeURIComponent(backgroundColor), color: decodeURIComponent(fontColor) }}>{text}</div>
+  <div style={{ width: '100px', height:'100px', backgroundColor: decodeURIComponent(backgroundColor), color: decodeURIComponent(fontColor) }}>name:{text}</div>
 );
 
 Shape.propTypes = {

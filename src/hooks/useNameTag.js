@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 export const useNameTag = () => {
   const [fontColor, setFontColor] = useState('blue');
   const [backgroundColor, setBackgroundColor] = useState('lightblue');
-  const [text, setText] = useState('hello');
+  const [text, setText] = useState('default name');
 
   const handleFontChange = (fontColor) => {
     setFontColor(fontColor);
