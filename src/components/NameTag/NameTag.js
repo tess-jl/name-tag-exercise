@@ -16,7 +16,7 @@ const NameTag = () => {
 
       <TextSelector text={text} handleTextChange={handleTextChange}/>
 
-      <Shape ontColor={fontColor} backgroundColor={backgroundColor} text={text}/>
+      <Shape fontColor={fontColor} backgroundColor={backgroundColor} text={text}/>
     </>
   );
 }; 
