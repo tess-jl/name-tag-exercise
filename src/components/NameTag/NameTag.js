@@ -1,41 +1,25 @@
-//container component, contains state, uses the other components 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ColorSelector from '../ColorSelector/ColorSelector.js';
 import TextSelector from '../TextSelector/TextSelector.js';
 import Shape from '../Shape/Shape.js';
-import PropTypes from 'prop-types';
+
+import { useNameTag } from '../../hooks/useNameTag.js';
 
 const NameTag = () => {
-  [fontColor, setFontColor] = useState('blue');
-  [backgroundColor, setBackgroundColor] = useState('lightblue');
-  const handleFontChange = ({ target }) => setFontColor(target.value);
-  const handleBackgroundChange = ({ target }) => setBackgroundColor(target.value);
 
-  useEffect(() => {
-    handleFontChange(); 
-  }, [fontColor]);
-
-  [text, setText] = useState('hello');
-  const handleTextChange = ({ target }) => setText(target.value);
+  const { fontColor, backgroundColor, text, handleFontChange, handleBackgroundChange, handleTextChange } = useNameTag();
 
   return (
     <>
       <h1>NameTag App</h1>
-      <ColorSelector fontColor={fontColor} handleFontChange={handleFontChange} backgroundColor={backgroundColor} handleBackgroundChange={handleBackgroundChange}/> 
+      <ColorSelector fontColor={fontColor} backgroundColor={backgroundColor} handleFontChange={handleFontChange} handleBackgroundChange={handleBackgroundChange}/> 
 
-      <TextSelector text={text} handleTextChange={handleTextChange} />
+      <TextSelector text={text} handleTextChange={handleTextChange}/>
 
-      <Shape />
+      <Shape ontColor={fontColor} backgroundColor={backgroundColor} text={text}/>
     </>
   );
 }; 
-
-NameTag.propTypes = {
-  text: PropTypes.string.isRequired, 
-  
-
-};
-
 
 export default NameTag; 
 

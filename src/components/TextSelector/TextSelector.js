@@ -1,17 +1,16 @@
-import React, { useState } from 'react'; 
+import React from 'react'; 
 import PropTypes from 'prop-types';
 
 
-const TextSelector = ({ text, handleChange }) => {
-  [text, setText] = useState('name');
+const TextSelector = ({ text, handleTextChange }) => {
 
   return (
-    <input type="text" value={text} placeholder="Your Name" onChange={({ target }) => setText(target.value)} />
+    <input type="text" value={text} placeholder="Your Name" onChange={({ target }) => handleTextChange(target.value)} />
   );
 }; 
 
 TextSelector.propTypes = {
-  handleChange: PropTypes.func.isRequired, 
+  handleTextChange: PropTypes.func.isRequired, 
   text: PropTypes.string.isRequired
 };
 

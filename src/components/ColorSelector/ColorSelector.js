@@ -8,9 +8,9 @@ const ColorSelector = ({ fontColor, backgroundColor, handleFontChange, handleBac
   return (
     <>
       <h3>select font color</h3>
-      <input type="color" value={fontColor} onChange={handleFontChange} />
+      <input type="color" value={fontColor} onChange={({ target }) => handleFontChange(target.value)} />
       <h3>select background color</h3>
-      <input type="color" value={backgroundColor} onChange={handleBackgroundChange} />
+      <input type="color" value={backgroundColor} onChange={({ target }) => handleBackgroundChange(target.value)} />
     </>
   );
 }; 
